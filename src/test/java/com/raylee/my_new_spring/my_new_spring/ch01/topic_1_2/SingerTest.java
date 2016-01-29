@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = {
 		"/com/raylee/my_new_spring/my_new_spring/ch01/topic_1_2/ApplicationContext-test.xml" })
 public class SingerTest {
+
 	@Autowired
 	private ApplicationContext applicationContext;
 
