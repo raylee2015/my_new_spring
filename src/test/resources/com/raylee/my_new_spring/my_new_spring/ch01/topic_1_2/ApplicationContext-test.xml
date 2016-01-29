@@ -25,7 +25,7 @@
 	<aop:config>
 		<aop:aspect ref="log">
 			<aop:pointcut
-				expression="execution(* com.raylee.my_new_spring.my_new_spring.ch01.topic_1_2.Song.*(..))"
+				expression="execution(* com.raylee.my_new_spring.my_new_spring.ch01.topic_1_2.Singer.*(..))"
 				id="logPointcut" />
 			<aop:before method="before" pointcut-ref="logPointcut" />
 			<aop:after method="after" pointcut-ref="logPointcut" />
