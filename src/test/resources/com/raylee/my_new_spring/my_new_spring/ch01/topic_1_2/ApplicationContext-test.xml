@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+	<bean id="jack"
+		class="com.raylee.my_new_spring.my_new_spring.ch01.topic_1_2.Singer">
+		<constructor-arg ref="song" />
+	</bean>
+	<bean id="song"
+		class="com.raylee.my_new_spring.my_new_spring.ch01.topic_1_2.Song">
+		<constructor-arg value="there will be" />
+	</bean>
+	<bean id="log"
+		class="com.raylee.my_new_spring.my_new_spring.ch01.topic_1_2.Log">
+	</bean>
+	<aop:config>
+		<aop:aspect ref="log">
+			<aop:pointcut
+				expression="execution(* com.raylee.my_new_spring.my_new_spring.ch01.topic_1_2.Song.*(..))"
+				id="logPointcut" />
+			<aop:before method="before" pointcut-ref="logPointcut" />
+			<aop:after method="after" pointcut-ref="logPointcut" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>
