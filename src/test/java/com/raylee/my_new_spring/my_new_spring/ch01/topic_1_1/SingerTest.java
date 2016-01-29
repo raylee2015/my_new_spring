@@ -8,7 +8,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:ApplicationContext-test.xml" })
+@ContextConfiguration(locations = {
+		"/com/raylee/my_new_spring/my_new_spring/ch01/topic_1_1/ApplicationContext-test.xml" })
 public class SingerTest {
 	@Autowired
 	private ApplicationContext applicationContext;
