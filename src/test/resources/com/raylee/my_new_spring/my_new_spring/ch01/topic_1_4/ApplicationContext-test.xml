@@ -16,6 +16,10 @@
 	<bean id="chief"
 		class="com.raylee.my_new_spring.my_new_spring.ch01.topic_1_4.Chief">
 		<constructor-arg ref="cake" />
+		<constructor-arg ref="oven" />
 	</bean>
+	<bean id="oven"
+		class="com.raylee.my_new_spring.my_new_spring.ch01.topic_1_4.Oven"
+		factory-method="getInstance" />
 
 </beans>
