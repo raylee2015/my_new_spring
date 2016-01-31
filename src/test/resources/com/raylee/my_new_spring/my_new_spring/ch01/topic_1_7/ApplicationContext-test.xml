@@ -16,5 +16,11 @@
 		<property name="name" value="Blueberry Cheesecake" />
 		<property name="size" value="7" />
 	</bean>
+	<bean id="chief"
+		class="com.raylee.my_new_spring.my_new_spring.ch01.topic_1_7.Chief">
+		<constructor-arg value="jack" />
+		<property name="cake" ref="cake" />
+	</bean>
+
 
 </beans>
