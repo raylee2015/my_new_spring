@@ -12,7 +12,7 @@
 		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"
-	default-autowire="constructor">
+	default-autowire="byName">
 
 	<bean id="blueberryCheeseCake"
 		class="com.raylee.my_new_spring.my_new_spring.ch02.topic_1_5.Cake"
@@ -20,5 +20,5 @@
 
 	<bean id="jack"
 		class="com.raylee.my_new_spring.my_new_spring.ch02.topic_1_5.Chief"
-		p:name="jack" />
+		p:name="jack" autowire="constructor" />
 </beans>
