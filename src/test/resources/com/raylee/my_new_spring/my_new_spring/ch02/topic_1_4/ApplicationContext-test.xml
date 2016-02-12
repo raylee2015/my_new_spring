@@ -13,6 +13,10 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+	<bean id="cake2"
+		class="com.raylee.my_new_spring.my_new_spring.ch02.topic_1_4.Cake"
+		p:name="cake2" scope="prototype" />
+
 	<bean id="blueberryCheeseCake"
 		class="com.raylee.my_new_spring.my_new_spring.ch02.topic_1_4.Cake"
 		p:name="blueberryCheeseCake" scope="prototype" />
